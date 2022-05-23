@@ -20,7 +20,7 @@ adminDetails.map(function(elem,index){
 
     let removebtn = document.createElement("button");
     removebtn.innerText = "Remove";
-    removebtn.setAttribute("class","Remove");
+    removebtn.setAttribute("id","remove_product");
     removebtn.addEventListener("click",function(){
         removeData(elem,index);
     })

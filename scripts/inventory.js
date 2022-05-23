@@ -16,7 +16,7 @@ adminDetails.map(function(elem,index){
 
     let image = document.createElement("img");
     image.src = elem.image;
-    image.setAttribute("class","image");
+    image.setAttribute("id","image");
 
     let removebtn = document.createElement("button");
     removebtn.innerText = "Remove";

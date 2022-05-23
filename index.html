@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin-Panel Page</title>
+  </head>
+  <style>
+    #navbar{
+      background-color: rgb(66, 16, 66);
+      padding:10px;
+    }
+    #show_products{
+      display:flex;
+      margin:auto;
+      border:2px solid white;
+      background-color: rgb(66, 16, 66);
+      font-size:20px;
+    }
+    #show_products>a{
+      text-decoration: none;
+      color:white;
+    }
+    #main-div{
+      width:250px;
+      display:flex;
+      flex-direction: column;
+      margin: auto;
+      align-items: center;
+      margin-top: 100px;
+      padding:10px 20px 50px 20px;
+      background-color: rgb(156, 179, 179);
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      border-radius: 10px;
+      border:3px solid rgb(236, 208, 164);
+    }
+    input{
+      font-size: 20px;
+    }
+    #add_product{
+       font-size: 15px;
+       padding:10px;
+       font-weight: bold;
+       background-color:rgb(108, 108, 197);
+       width:150px;
+       display:flex;
+       text-align: center;
+       justify-content: center;
+       margin:auto;
+       color:white;
+       border:3px solid rgb(236, 208, 164);
+       border-radius: 10px;
+    }
+    #add_product:hover{
+      cursor: pointer;
+      background-color: brown;
+    }
+    #products{
+      display:flex;
+      flex-direction: column;
+      gap:20px;
+    }
+    #main-div>h2{
+      color:#000;
+    }
+  </style>
+
+  <body>
+    <div id="navbar">
+      <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
+      <button id="show_products"><a href="inventory.html">Show Products</a></button>
+    </div>
+    <div id="main-div">
+      <h2>Add Products</h2>
+      <!--Create a form here to accept product data from user, give form HTML id as "products"-->
+
+      <!--Create four inputs to accept Type, Description, price, & image-->
+      <!--give the inputs following respective id's, "type", "desc", "price","image"-->
+      <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
+      <form id="products" onsubmit="adminPanel(event)">
+        <input type="text" placeholder="Type" id="type" required/>
+        <input type="text" placeholder="Description" id="desc" required/>
+        <input type="text" placeholder="Price" id="price" required/>
+        <input type="text" placeholder="Image" id="image" required/>
+        <button id="add_product">Add Product</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/index.js"></script>
